@@ -5,23 +5,27 @@ import java.util.Scanner;
 public class Game369 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		System.out.printf("숫자를 입력해주세요:");
 		String inputNum = scan.nextLine();
 		for (int i = 1; i <= Integer.parseInt(inputNum); i++) {
-			int clap = 0;
-
-			char firstNum = inputNum.charAt(0);
-			char secendNum = inputNum.charAt(1);
-			if (firstNum=='3'||firstNum=='6'||firstNum=='9') {
+			String str1  = Integer.toString(i);
+			int clap =0;
+			
+			if (str1.charAt(0)=='3'||str1.charAt(0)=='6'||str1.charAt(0)=='9') {
 				clap++;
-				if(secendNum=='3'||secendNum=='6'||secendNum=='9'){
+			}
+			if(i>=10){
+				if(str1.charAt(1)=='3'||str1.charAt(1)=='6'||str1.charAt(1)=='9'){
 					clap++;
 				}
-				System.out.println("clap="+clap);
-				if(clap!=0){
-					System.out.println("i="+i);
-				}
 			}
-			
+			if(clap!=0){
+				System.out.print(i);
+				for(int j=0; j<clap; j++){
+					System.out.print('짝');
+				}
+				System.out.println("");
+			}
 		}
 		scan.close();
 	}
