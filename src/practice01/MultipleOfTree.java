@@ -15,7 +15,7 @@ public class MultipleOfTree {
 
 			char regame = 'd';
 			int quest = random.nextInt(100) + 1;
-			System.out.println("수를 결정하였습니다. 맞추어보세요 ");
+			System.out.println("수를 결정하였습니다. 맞추어보세요 "+quest);
 			int min = 1;
 			int max = 100;
 
@@ -36,7 +36,7 @@ public class MultipleOfTree {
 
 			System.out.println("맞추셨습니다. 정답은" + quest + "입니다.");
 
-			while (!(regame == 'y') || (regame == 'n')) {
+			while (regame != 'y' && regame != 'n') {
 				System.out.println("다시하시겠습니까.(y/n)>>");
 				regame = scanner.next().charAt(0);
 				switch (regame) {
