@@ -3,7 +3,7 @@ package practice01;
 import java.util.Scanner;
 import java.util.Random;
 
-public class MultipleOfTree {
+public class MultipleOfTree_test {
 
 	public static void main(String[] args) {
 
@@ -20,6 +20,7 @@ public class MultipleOfTree {
 			int max = 100;
 
 			while (quest != answer) {
+
 				int counter = 0;
 				System.out.println(min + "-" + max);
 				counter++;
@@ -33,12 +34,11 @@ public class MultipleOfTree {
 					max = answer;
 				}
 			}
-
 			System.out.println("맞추셨습니다. 정답은" + quest + "입니다.");
-
-			while (!(regame == 'y') || (regame == 'n')) {
+			while (!(regame == 'y')||(regame == 'n')) {
 				System.out.println("다시하시겠습니까.(y/n)>>");
 				regame = scanner.next().charAt(0);
+
 				switch (regame) {
 				case 'y':
 					break;
@@ -47,17 +47,16 @@ public class MultipleOfTree {
 				default:
 					System.out.println("잘못입력하였습니다. 다시 입력해주세요.");
 					continue;
+
 				}
 				break;
 			}
-
 			if (regame == 'n') {
 				System.out.println("감사합니다. 게임을 종료하겠습니다.");
 				break;
 			} else if (regame == 'y') {
 				continue;
 			}
-
 		} while (true);
 		scanner.close();
 	}
