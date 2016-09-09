@@ -15,7 +15,7 @@ public class MultipleOfTree {
 
 			char regame = 'd';
 			int quest = random.nextInt(100) + 1;
-			System.out.println("수를 결정하였습니다. 맞추어보세요 "+quest);
+			System.out.println("수를 결정하였습니다. 맞추어보세요 ");
 			int min = 1;
 			int max = 100;
 
